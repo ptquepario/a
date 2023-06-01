@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Convite Romântico</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    h1 {
+      color: #ff4d4d;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 18px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+      border: none;
+      margin: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .btn-yes {
+      background-color: #ff4d4d;
+      color: #fff;
+    }
+
+    .btn-no {
+      background-color: #f0f0f0;
+      color: #333;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+    }
+
+    .error-message {
+      color: #ff4d4d;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+  </style>
+  <script>
+    function showErrorMessage() {
+      var errorMessage = document.getElementById("error-message");
+      errorMessage.style.display = "block";
+    }
+  </script>
+</head>
+<body>
+  <h1>Quer ficar comigo hoje à noite?</h1>
+  <a href="https://api.whatsapp.com/send?phone=+5581988126296&text=Claro,%20meu%20Gostoso!" target="_blank" class="btn btn-yes">Sim</a>
+  <a href="#" class="btn btn-no" onclick="showErrorMessage();">Não</a>
+  <p id="error-message" class="error-message" style="display: none;">Alternativa errada, tente novamente.</p>
+</body>
+</html>
